@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickWeb | Modern Web Solutions</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="{{ url_for('home') }}" class="logo">
+            QUICK<span>WEB</span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="{{ url_for('login') }}" class="login-link">
+                Login
+            </a>
+
+            <a href="{{ url_for('signup') }}" class="signup-btn">
+                Get Started
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    ✦ ITS THE 1st BUT NOT LAST
+                </div>
+
+                <h1>
+                    Build your ideas.
+                    <br>
+                    <span>Make them real.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A modern web experience built with Python, Flask
+                    and a passion for creating something better.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="{{ url_for('signup') }}"
+                       class="primary-btn">
+                        Start Building
+                        <span>→</span>
+                    </a>
+                </div>
+                <dav>
+                <br>
+                
+                </dav>
+
+
+
+                <dav>
+                     <a href="{{ url_for('tools_dashboard') }}" class="explore-btn">
+                        <span>Explore Features</span>
+                        <span class="explore-arrow">↗</span>
+                    </a>
+                </dav>
+
+                <div class="trust">
+                    <span>✓</span> Simple
+                    <span>✓</span> Fast
+                    <span>✓</span> Modern
+                </div>
+
+            </div>
+
+
+            <!-- HERO CARD -->
+            <div class="hero-visual">
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+                        <div class="dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <span>QUICK WEB</span>
+                    </div>
+
+                    <div class="dashboard-content">
+
+                        <div class="mini-icon">⚡</div>
+
+                        <h3>Welcome to Quick Web</h3>
+
+                        <p>
+                            Your modern web journey starts here.
+                        </p>
+
+                        <div class="progress">
+                            <div></div>
+                        </div>
+
+                        <div class="stats">
+
+                            <div>
+                                <strong>Fast</strong>
+                                <small>Performance</small>
+                            </div>
+
+                            <div>
+                                <strong>100%</strong>
+                                <small>Responsive</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section id="features" class="features">
+
+            <div class="section-heading">
+
+                <span>FEATURES</span>
+
+                <h2>
+                    Everything you need
+                    <br>
+                    to get started.
+                </h2>
+
+                <p>
+                    Designed to be simple, powerful and easy to expand.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon purple">
+                        ⚡
+                    </div>
+
+                    <h3>Lightning Fast</h3>
+
+                    <p>
+                        Lightweight architecture designed
+                        for fast and smooth experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon blue">
+                        ◈
+                    </div>
+
+                    <h3>Built with Python</h3>
+
+                    <p>
+                        Powered by Python and Flask,
+                        giving you a strong foundation.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon pink">
+                        ◉
+                    </div>
+
+                    <h3>Fully Responsive</h3>
+
+                    <p>
+                        Looks clean and professional
+                        on desktop, tablet and mobile.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+
+            <div>
+
+                <span class="section-label">
+                    ABOUT QUICK WEB
+                </span>
+
+                <h2>
+                    Start small.
+                    <br>
+                    <span>Build bigger.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Quick Web is a simple project built to explore
+                modern web development using Python and Flask.
+                This is just the beginning.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            QUICK<span>WEB</span>
+        </div>
+
+        <p>
+            By Ankit
+        </p>
+
+        <span>
+            © 2026 Quick Web
+        </span>
+
+    </footer>
+
+</body>
+</html>

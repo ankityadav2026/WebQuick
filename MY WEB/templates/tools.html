@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Online Tools | QuickWeb</title>
+    <meta name="description"
+          content="Discover useful free online tools for text, calculations, QR codes and more.">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="tools-page">
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <header class="navbar tools-navbar">
+        <a class="logo" href="{{ url_for('home') }}">
+            QUICK<span>WEB</span>
+        </a>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('tools_dashboard') }}">All Tools</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a class="login-link" href="{{ url_for('login') }}">Login</a>
+            <a class="signup-btn" href="{{ url_for('signup') }}">Get Started ↗</a>
+        </div>
+    </header>
+
+    <main class="tools-container">
+
+        <section class="tools-hero">
+            <span class="badge">YOUR EVERYDAY TOOLKIT</span>
+
+            <h1>Everything you need.<br>
+                <span>All in one place.</span>
+            </h1>
+
+            <p>
+                Simple, useful tools that save time.
+                No complicated setup.
+            </p>
+
+            <div class="tools-search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    id="toolSearch"
+                    type="search"
+                    placeholder="Search tools, e.g. word counter..."
+                    aria-label="Search tools"
+                >
+                <kbd>SEARCH</kbd>
+            </div>
+        </section>
+
+        <section class="tools-section">
+
+            <div class="tools-section-heading">
+                <div>
+                    <span class="section-label">EXPLORE</span>
+                    <h2>Tools for everything</h2>
+                </div>
+                <span class="tools-count" id="toolsCount">6 tools</span>
+            </div>
+
+            <div class="tool-filters" aria-label="Filter tools">
+                <button class="tool-filter active" data-category="all">All tools</button>
+                <button class="tool-filter" data-category="text">Text</button>
+                <button class="tool-filter" data-category="calculators">Calculators</button>
+                <button class="tool-filter" data-category="productivity">Productivity</button>
+                <button class="tool-filter" data-category="images">Images &amp; files</button>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid">
+
+                <article class="tool-card"
+                         data-category="text"
+                         data-search="word counter character count text words">
+                    <div class="tool-card-top">
+                        <div class="tool-card-icon violet">Aa</div>
+                        
+                    </div>
+                    <h3>Word Counter</h3>
+                    <p>Count words, characters and sentences in your text.</p>
+                    
+                    <a href="{{ url_for('word_counter') }}" class="tool-open-btn">
+                        Open <span>→</span>
+                    </a>
+                     
+                </article>
+
+                <article class="tool-card"
+                         data-category="text"
+                         data-search="uppercase lowercase case converter text">
+                    <div class="tool-card-top">
+                        <div class="tool-card-icon blue">Aa</div>
+                        
+                    </div>
+                    <h3>Case Converter</h3>
+                    <p>Convert text to uppercase, lowercase or title case.</p>
+                    <a href="{{ url_for('case_converter') }}"
+                       class="tool-open-btn">
+                        Open <span>→</span>
+                    </a>
+                </article>
+
+                <article class="tool-card"
+                         data-category="calculators"
+                         data-search="percentage calculator marks discount">
+                    <div class="tool-card-top">
+                        <div class="tool-card-icon pink">%</div>
+                        <span class="tool-status">COMING SOON</span>
+                    </div>
+                    <h3>Percentage Calculator</h3>
+                    <p>Calculate percentages, marks and percentage changes.</p>
+                    <a href="#"
+                       class="tool-card-link coming-soon"
+                       aria-label="Percentage Calculator coming soon">Explore tool ↗</a>
+                </article>
+
+                <article class="tool-card"
+                         data-category="calculators"
+                         data-search="age calculator birthday date">
+                    <div class="tool-card-top">
+                        <div class="tool-card-icon green">◷</div>
+                        <span class="tool-status">COMING SOON</span>
+                    </div>
+                    <h3>Age Calculator</h3>
+                    <p>Calculate your age from your date of birth.</p>
+                    <a href="#"
+                       class="tool-card-link coming-soon"
+                       aria-label="Age Calculator coming soon">Explore tool ↗</a>
+                </article>
+
+                <article class="tool-card"
+                         data-category="productivity"
+                         data-search="qr code generator url link scan">
+                    <div class="tool-card-top">
+                        <div class="tool-card-icon orange">▦</div>
+                        <span class="tool-status">COMING SOON</span>
+                    </div>
+                    <h3>QR Code Generator</h3>
+                    <p>Turn text or a website link into a scannable QR code.</p>
+                    <a href="#"
+                       class="tool-card-link coming-soon"
+                       aria-label="QR Code Generator coming soon">Explore tool ↗</a>
+                </article>
+
+                <article class="tool-card"
+                         data-category="images"
+                         data-search="image compressor resize photo jpg png">
+                    <div class="tool-card-top">
+                        <div class="tool-card-icon violet">▧</div>
+                        <span class="tool-status">COMING SOON</span>
+                    </div>
+                    <h3>Image Compressor</h3>
+                    <p>Reduce image file sizes for easier sharing and uploading.</p>
+                    <a href="#"
+                       class="tool-card-link coming-soon"
+                       aria-label="Image Compressor coming soon">Explore tool ↗</a>
+                </article>
+
+            </div>
+
+            <div class="tools-empty" id="toolsEmpty" hidden>
+                <div>⌕</div>
+                <h3>No tools found</h3>
+                <p>Try another search or choose a different category.</p>
+                <button id="resetTools" class="outline-btn">Show all tools</button>
+            </div>
+
+        </section>
+
+        <section class="tools-cta">
+            <div>
+                <span class="section-label">MORE COMING SOON</span>
+                <h2>Small tools. Big time savings.</h2>
+                <p>We're building a better collection of everyday utilities.</p>
+            </div>
+            <a href="{{ url_for('home') }}" class="primary-btn">
+                Back to home <span>→</span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="tools-footer">
+        <a class="footer-logo" href="{{ url_for('home') }}">
+            QUICK<span>WEB</span>
+        </a>
+        <p>Simple tools. Better workflows.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='tools.js') }}"></script>
+</body>
+</html>
